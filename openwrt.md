@@ -2,23 +2,33 @@
 
 ## 1. 替换ash为bash
 
-1. opkg install bash
-2. nano /etc/passwd
+1. ```shell
+   opkg install bash
+   ```
+
+   
+
+2. ```shell
+   nano /etc/passwd
+   ```
+
+   
+
 3. 将 /bin/ash 替换为 /bin/bash
 
 ## 2. 安装全功能 ps 命令
 
-默认的ps来自busybox。该功能不完整，不支持 aux、ef 选项。
+默认的ps来自busybox。该功能不完整，不支持 aux、ef 选项
 
-去openwrt官网查找对应的 procps-ng-ps
-
+```shell
 opkg install procps-ng-ps
+```
 
 
 
 ## 3. 程序自启动脚本例子，/etc/init.d/xxx
 
-~~~
+~~~shell
 #!/bin/sh /etc/rc.common
 
 START=20
